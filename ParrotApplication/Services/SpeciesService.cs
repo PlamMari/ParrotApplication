@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-
 using ParrotsApplication.Models;
 using ParrotsApplication.Repositories;
 
