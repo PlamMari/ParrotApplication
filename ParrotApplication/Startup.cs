@@ -1,56 +1,72 @@
+using ParrotsApplication.Data;
+using ParrotsApplication.Models.Mappers;
+using ParrotsApplication.Repositories;
+using ParrotsApplication.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 
-namespace ParrotApplication
+namespace ParrotsApplication
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration Config)
         {
-            Configuration = configuration;
+            this.Config = Config;
         }
-
-        public IConfiguration Configuration { get; }
-
+        public IConfiguration Config { get; set; }
         // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            //swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "My API",
+                    Description = "Beer Management API",                    
+                });
+            });
+            services.AddControllers().AddNewtonsoftJson(
+                options => options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
+            //EF
+            services.AddDbContext<ApplicationContext>(options =>
+                options.UseSqlServer(Config.GetConnectionString("DefaultConnection")));
+            //IoC
+            // Repositories
+            services.AddScoped<IParrotsRepository, ParrotsRepository>();
+            services.AddScoped<ISpeciesRepository, SpeciesRepository>();
+            // Services
+            services.AddScoped<IParrotsService, ParrotsService>();
+            services.AddScoped<ISpeciesService, SpeciesService>();
+            // Helpers
+            services.AddTransient<ParrotMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            // This middleware serves generated Swagger document as a JSON endpoint
+            app.UseSwagger();
+
+            // This middleware serves the Swagger documentation UI
+            app.UseSwaggerUI(c =>
             {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Employee API V1");
+            });
+            app.UseDeveloperExceptionPage();
 
             app.UseRouting();
 
-            app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllers();
             });
         }
     }

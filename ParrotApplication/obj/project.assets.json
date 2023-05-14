@@ -5752,9 +5752,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ppetrova5\\OneDrive - DXC Production\\Desktop\\.Net\\ParrotApplication\\ParrotApplication\\ParrotApplication.csproj",
-      "projectName": "ParrotApplication",
-      "projectPath": "C:\\Users\\ppetrova5\\OneDrive - DXC Production\\Desktop\\.Net\\ParrotApplication\\ParrotApplication\\ParrotApplication.csproj",
+      "projectUniqueName": "C:\\Users\\ppetrova5\\OneDrive - DXC Production\\Desktop\\.Net\\ParrotApplication\\ParrotApplication\\ParrotsApplication.csproj",
+      "projectName": "ParrotsApplication",
+      "projectPath": "C:\\Users\\ppetrova5\\OneDrive - DXC Production\\Desktop\\.Net\\ParrotApplication\\ParrotApplication\\ParrotsApplication.csproj",
       "packagesPath": "C:\\Users\\ppetrova5\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ppetrova5\\OneDrive - DXC Production\\Desktop\\.Net\\ParrotApplication\\ParrotApplication\\obj\\",
       "projectStyle": "PackageReference",

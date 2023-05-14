@@ -1,7 +1,7 @@
-﻿using BeersApplication.Models;
-using BeersApplication.Services;
+﻿using ParrotsApplication.Models;
+using ParrotsApplication.Services;
 
-namespace BeersApplication.Models.Mappers
+namespace ParrotsApplication.Models.Mappers
 {
     public class ParrotMapper
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace BeersApplication.Models
+namespace ParrotsApplication.Models
 {
     public class Parrot
     {

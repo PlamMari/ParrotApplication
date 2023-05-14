@@ -1,10 +1,10 @@
-﻿using BeersApplication.Exceptions;
-using BeersApplication.Models;
-using BeersApplication.Repositories;
+﻿using ParrotsApplication.Exceptions;
+using ParrotsApplication.Models;
+using ParrotsApplication.Repositories;
 using System;
 using System.Collections.Generic;
 
-namespace BeersApplication.Services
+namespace ParrotsApplication.Services
 {
     public class ParrotsService : IParrotsService
     {

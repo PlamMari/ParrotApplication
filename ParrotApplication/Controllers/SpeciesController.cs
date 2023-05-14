@@ -1,5 +1,5 @@
-﻿using BeersApplication.Exceptions;
-using BeersApplication.Services;
+﻿using ParrotsApplication.Exceptions;
+using ParrotsApplication.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

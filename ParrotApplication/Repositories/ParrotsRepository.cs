@@ -1,13 +1,13 @@
-﻿using BeersApplication.Data;
-using BeersApplication.Exceptions;
-using BeersApplication.Models;
+﻿using ParrotsApplication.Data;
+using ParrotsApplication.Exceptions;
+using ParrotsApplication.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BeersApplication.Repositories
+namespace ParrotsApplication.Repositories
 {
     public class ParrotsRepository : IParrotsRepository
     {

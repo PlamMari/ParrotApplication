@@ -1,7 +1,7 @@
-﻿using BeersApplication.Models;
+﻿using ParrotsApplication.Models;
 using System.Collections.Generic;
 
-namespace BeersApplication.Services
+namespace ParrotsApplication.Services
 {
     public interface IParrotsService
     {

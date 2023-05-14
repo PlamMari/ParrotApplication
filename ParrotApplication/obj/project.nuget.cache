@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RgkXWf1KU1u+Fz8BWnXOYrx+51ozVSC5t0cUqXXtVk/vvkzldpYTduh6TYtryMJvVOKCj56dGYiKt7RnvZ1Q2A==",
+  "dgSpecHash": "0NRGTfo7Xk3Xx2W9L7hJOX19vKEhTNCa3/Xu7jN5Rv7Ej3ybZGWHw+MdPOGAccRX2zhhxPI6+gX0qNa/As1TPg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ppetrova5\\OneDrive - DXC Production\\Desktop\\.Net\\ParrotApplication\\ParrotApplication\\ParrotApplication.csproj",
+  "projectFilePath": "C:\\Users\\ppetrova5\\OneDrive - DXC Production\\Desktop\\.Net\\ParrotApplication\\ParrotApplication\\ParrotsApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ppetrova5\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ppetrova5\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.32\\microsoft.aspnetcore.jsonpatch.3.1.32.nupkg.sha512",

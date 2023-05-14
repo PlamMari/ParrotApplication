@@ -1,13 +1,13 @@
-﻿using BeersApplication.Exceptions;
-using BeersApplication.Models;
-using BeersApplication.Models.Mappers;
-using BeersApplication.Services;
+﻿using ParrotsApplication.Exceptions;
+using ParrotsApplication.Models;
+using ParrotsApplication.Models.Mappers;
+using ParrotsApplication.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
 
-namespace BeersApplication.Controllers
+namespace ParrotsApplication.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

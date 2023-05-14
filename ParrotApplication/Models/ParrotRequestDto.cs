@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace BeersApplication.Models
+namespace ParrotsApplication.Models
 {
     public class ParrotRequestDto
     {        

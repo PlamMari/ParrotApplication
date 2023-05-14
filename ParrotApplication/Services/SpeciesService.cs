@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 
-using BeersApplication.Models;
-using BeersApplication.Repositories;
+using ParrotsApplication.Models;
+using ParrotsApplication.Repositories;
 
-namespace BeersApplication.Services
+namespace ParrotsApplication.Services
 {
     public class SpeciesService : ISpeciesService
     {

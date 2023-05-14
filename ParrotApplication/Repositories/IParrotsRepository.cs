@@ -1,10 +1,10 @@
-﻿using BeersApplication.Models;
+﻿using ParrotsApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BeersApplication.Repositories
+namespace ParrotsApplication.Repositories
 {
     public interface IParrotsRepository
     {
