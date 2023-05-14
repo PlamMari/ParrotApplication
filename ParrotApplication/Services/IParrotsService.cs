@@ -9,7 +9,7 @@ namespace ParrotsApplication.Services
         List<Parrot> Get(ParrotQueryParameters filterParameters);
         Parrot Get(int id);
         Parrot Create(Parrot parrot);
-        Parrot Update(int id, Parrot parrot/*, User user*/);
-        void Delete(int id/*, User user*/);
+        Parrot Update(int id, Parrot parrot);
+        void Delete(int id);
     }
 }

@@ -46,7 +46,6 @@ namespace ParrotsApplication.Repositories
         public List<Parrot> Get(ParrotQueryParameters filterParameters)
         {
             string name = !string.IsNullOrEmpty(filterParameters.Name) ? filterParameters.Name.ToLowerInvariant() : string.Empty;
-            // load related data in order to work
             string species = !string.IsNullOrEmpty(filterParameters.Species) ? filterParameters.Species.ToLowerInvariant() : string.Empty;
             string sortCriteria = !string.IsNullOrEmpty(filterParameters.SortBy) ? filterParameters.SortBy.ToLowerInvariant() : string.Empty;
             string sortOrder = !string.IsNullOrEmpty(filterParameters.SortOrder) ? filterParameters.SortOrder.ToLowerInvariant() : string.Empty;

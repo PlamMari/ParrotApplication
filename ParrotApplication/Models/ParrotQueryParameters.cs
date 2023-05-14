@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ParrotsApplication.Models
-{
+﻿namespace ParrotsApplication.Models{
     public class ParrotQueryParameters
     {
         public string Name { get; set; }

@@ -30,11 +30,7 @@ namespace ParrotsApplication.Services
             return createdParrot;
         }
 
-        public void Delete(int id/*, User user*/) {
-           /* if (!user.IsAdmin)
-            {
-                throw new UnauthorizedAccessException(Modify_parrot_error_message);
-            }*/
+        public void Delete(int id) {
             this.repository.Delete(id);
         }
 

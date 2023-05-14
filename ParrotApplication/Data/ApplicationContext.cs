@@ -1,9 +1,6 @@
 ﻿using ParrotsApplication.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ParrotsApplication.Data
 {
@@ -54,7 +51,7 @@ namespace ParrotsApplication.Data
             videos.Add(new Video() { Id = 9, ParrotId = 6, Value = "https://www.youtube.com/watch?v=MIAwx3XwnsY" });
             videos.Add(new Video() { Id = 10, ParrotId = 7, Value = "https://www.youtube.com/shorts/_AmBMMv88rI" });
             videos.Add(new Video() { Id = 11, ParrotId = 7, Value = "https://www.youtube.com/shorts/FVxlikv7QWM" });
-            videos.Add(new Video() { Id = 12, ParrotId = 6, Value = "https://www.youtube.com/watch?v=7Arab-zmne0" });
+            videos.Add(new Video() { Id = 12, ParrotId = 7, Value = "https://www.youtube.com/shorts/RrM9DmeevAA" });
 
             modelBuilder.Entity<Video>().HasData(videos);
         }
